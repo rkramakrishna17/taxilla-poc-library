@@ -16,7 +16,7 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
-after_success:
+before_deploy:
   - git add .
   - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
   - git config credential.helper "store --file=.git/credentials"
