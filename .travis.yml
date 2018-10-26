@@ -19,6 +19,6 @@ branches:
 deploy:
   provider: npm
   email: rkabrahpudi@taxilla.com
-  api_key: 36e0e3a6-c1e5-42c0-95ef-a8437689d6f8
+  api_key: $NPM_TOKEN
   on:
-    tags: true
+    tags: false
