@@ -16,14 +16,13 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
-before_deploy:
-  - git add .
-  - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - git push && git push --tags
 deploy:
   provider: npm
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
   email: rkabrahpudi@taxilla.com
   api_key: $NPM_TOKEN
   on:
