@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-taxillaAPI-poc',
+  selector: 'lib-taxilla-library-poc',
   template: `
     <p>
-      taxilla-api-poc works!
+      taxilla-library-poc works!
     </p>
   `,
   styles: []
 })
-export class TaxillaAPIPocComponent implements OnInit {
+export class TaxillaLibraryPocComponent implements OnInit {
 
   constructor() { }
 

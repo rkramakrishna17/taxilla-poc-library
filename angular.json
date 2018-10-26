@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "taxilla-library-poc": {
+      "root": "projects/taxilla-library-poc",
+      "sourceRoot": "projects/taxilla-library-poc/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/taxilla-library-poc/tsconfig.lib.json",
+            "project": "projects/taxilla-library-poc/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/taxilla-library-poc/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/taxilla-library-poc/src/test.ts",
+            "tsConfig": "projects/taxilla-library-poc/tsconfig.spec.json",
+            "karmaConfig": "projects/taxilla-library-poc/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/taxilla-library-poc/tsconfig.lib.json",
+              "projects/taxilla-library-poc/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "taxilla-poc-library"

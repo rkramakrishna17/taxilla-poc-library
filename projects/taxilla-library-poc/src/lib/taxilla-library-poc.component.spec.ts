@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaxillaAPIPocComponent } from './taxilla-api-poc.component';
+import { TaxillaLibraryPocComponent } from './taxilla-library-poc.component';
 
-describe('TaxillaAPIPocComponent', () => {
-  let component: TaxillaAPIPocComponent;
-  let fixture: ComponentFixture<TaxillaAPIPocComponent>;
+describe('TaxillaLibraryPocComponent', () => {
+  let component: TaxillaLibraryPocComponent;
+  let fixture: ComponentFixture<TaxillaLibraryPocComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TaxillaAPIPocComponent ]
+      declarations: [ TaxillaLibraryPocComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TaxillaAPIPocComponent);
+    fixture = TestBed.createComponent(TaxillaLibraryPocComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

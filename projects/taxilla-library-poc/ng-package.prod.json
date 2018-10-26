@@ -1,7 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/taxilla-api-poc",
-  "deleteDestPath": false,
+  "dest": "../../dist/taxilla-library-poc",
   "lib": {
     "entryFile": "src/public_api.ts"
   }
