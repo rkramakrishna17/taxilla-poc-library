@@ -21,4 +21,4 @@ deploy:
   email: rkabrahpudi@taxilla.com
   api_key: $NPM_TOKEN
   on:
-    tags: true
+    tags: false
