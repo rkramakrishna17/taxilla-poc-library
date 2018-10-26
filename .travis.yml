@@ -22,3 +22,8 @@ deploy:
   api_key: $NPM_TOKEN
   on:
     tags: false
+after_deploy:
+  - npm version minor
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - git push && git push --tags
