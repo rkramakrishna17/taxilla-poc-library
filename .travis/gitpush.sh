@@ -7,5 +7,5 @@ git checkout master
 git stash pop
 git add package.json
 git add package-lock.json
-git commit -m "Auto-updating package release version ${GH_TOKEN}"
+git commit -m "Auto-updating package  release version number ${next}"
 git push https://${GH_TOKEN}@github.com/rkramakrishna17/taxilla-poc-library.git
