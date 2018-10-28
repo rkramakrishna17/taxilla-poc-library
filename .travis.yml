@@ -19,6 +19,8 @@ branches:
   except:
     - /^v\d+\.\d+\.\d+$/
 deploy:
+  tag: next
+  skip_cleanup: true
   provider: npm
   email: rkabrahpudi@taxilla.com
   api_key: $NPM_TOKEN
