@@ -13,7 +13,6 @@ script:
   - npm run build-ci
 after_success:
   - npm run travis-deploy-once "npm run semantic-release"
-  sh .travis/gitpush.sh
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
