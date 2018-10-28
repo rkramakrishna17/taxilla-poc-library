@@ -13,16 +13,12 @@ script:
   - npm run build-ci
 after_success:
   - npm run travis-deploy-once "npm run semantic-release"
+  sh .travis/gitpush.sh
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
 deploy:
   provider: npm
-  skip-cleanup: true
-  keep-history: true
-  on:
-    branch: master
-  email: rkabrahpudi@taxilla.com
   api_key: $NPM_TOKEN
   on:
     tags: false
