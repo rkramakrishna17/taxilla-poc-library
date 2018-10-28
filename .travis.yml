@@ -14,7 +14,7 @@ script:
 after_success:
   - npm run travis-deploy-once "npm run semantic-release"
 after_deploy:
-  - ./.travis/gitpush.sh
+  - .travis/gitpush.sh
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
